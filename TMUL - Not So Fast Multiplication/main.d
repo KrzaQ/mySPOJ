@@ -16,5 +16,4 @@ void main()
 		BigInt y = split[1].to!BigInt;
 		(x*y).writeln;
 	}
-
 }
