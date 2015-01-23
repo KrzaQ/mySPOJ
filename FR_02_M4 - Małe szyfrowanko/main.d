@@ -8,6 +8,7 @@ import std.typecons;
 import std.bigint;
 import std.functional;
 import std.math;
+import std.range;
 
 immutable string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char[1024*100] buf;
@@ -17,7 +18,7 @@ auto encrypt(S)(S s, S key)
 	char[] ret = buf[0..s.length];
 	int ki;
 	int kl = key.length;
-	foreach(i, c; s){
+	foreach(i, char c; s){
 		if(c == ' '){
 			ret[i] = ' ';
 			continue;
