@@ -45,7 +45,7 @@ int main()
 
 	unordered_map<i64,set<string>> dict;
 
-	std::string s;
+	string s;
 	for(int i = 0; i < words; ++i){
 		cin >> s;
 		i64 val{};
@@ -60,9 +60,9 @@ int main()
 		i64 val{};
 		cin >> val;
 		try{
-			std::copy(begin(dict.at(val)), std::end(dict.at(val)), ostream_iterator<string>(cout, " "));
+			copy(begin(dict.at(val)), end(dict.at(val)), ostream_iterator<string>(cout, " "));
 			cout << endl;
-		}catch(std::exception const&){
+		}catch(exception const&){
 			cout << "BRAK" << endl;
 		}
 	}

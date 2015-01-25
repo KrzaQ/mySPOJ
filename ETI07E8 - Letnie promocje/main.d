@@ -73,7 +73,7 @@ void main()
 	};
 
 	for(int i = 0; i < words; ++i){
-		auto str = stdin.extract!string.toLower;
+		auto str = stdin.extract!string;
 
 		//"'%s'".format(str).writeln;
 
