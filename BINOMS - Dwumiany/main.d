@@ -10,16 +10,16 @@ import std.string;
 
 auto binomialCoefficientImpl(T,U)(U k, U n)
 {
-	T numerator = 1, denominator = 1;
+	T result = 1;
 	auto loopMax = min(k-n, n);
 	for(U i = 0; i < loopMax; ++i){
-		numerator *= k-i;
-		denominator *= i+1;
+		result *= k-i;
+		result /= i+1;
 	}
-	return numerator / denominator;
+	return result;
 }
 
-alias binomialCoefficient = memoize!(binomialCoefficientImpl!(BigInt, uint));
+alias binomialCoefficient = memoize!(binomialCoefficientImpl!(ulong, uint));
 
 auto extract(T, R)(R r)
 {
