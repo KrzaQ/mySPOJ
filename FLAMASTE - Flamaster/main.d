@@ -16,9 +16,6 @@ void main()
 	auto r = ctRegex!r"(\w)\1(\1+)";
 
 	for(int i = 0; i < num; ++i){
-		//auto split = stdin.byLine.front.split;
-		//auto x = split[0].to!int;
-		//auto y = split[1].to!int;
 		auto l = stdin.byLine.front;
 		replaceAll!(v => "%s%d".format(v[1], v[2].length+2))(l, r).writeln;
 	}
