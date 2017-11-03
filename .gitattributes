@@ -1,0 +1,10 @@
+* text eol=lf
+
+*.cpp text
+*.h text
+*.hpp text
+*.d text
+*.di text
+*.json text
+*.md text
+
